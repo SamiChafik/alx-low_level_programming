@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 /*
  * malloc_checked(unsigned int b) allocates memory
@@ -9,7 +9,9 @@
 
 void *malloc_checked(unsigned int b)
 {
-	void *ptr = malloc(b);
+	void *ptr;
+
+	ptr = malloc(b);
 
 	if (ptr == NULL)
 	{
